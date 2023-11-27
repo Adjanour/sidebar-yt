@@ -2,26 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+
+.open{
+    width: calc(100% - 300px);
+    left: 275px;
+}
+.close{
+    width: calc(100% - 200px);
+    left: 150px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+ .li .tooltip {
+    opacity: 1;
+    transition: var(--transition);
+    top: 50%;
+    transform: translateY(-50%);
   }
+  
+.tooltipNone {
+    display: none;
+  }
+  .e-grid .e-altrow {
+    background-color: #fafafa;
+}
+.control_wrapper.textbox-form {
+  max-width: 400px;
+  margin: auto;
+  border: 0.5px solid #bebebe;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 36%);
+  padding: 1% 4% 2%;
+  background: #f9f9f9;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.form-title {
+  text-align: center;
+}
+
+.submitBtn {
+  text-align: center;
+  margin: 30px;
+}
+
+#container {
+  margin: 20px auto 0;
+  width:450px;
+}
+
+.form-group {
+  padding-top: 11px;
+}
+
+.e-custom-label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
