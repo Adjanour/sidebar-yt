@@ -54,6 +54,12 @@ const sidebarItems: SideNavItemType[] = [
     isSidebarOpen: true,
   },
   {
+    icon: { icon: <RiTaskLine />, fillicon: <RiTaskFill /> },
+    label: "Dashboard",
+    href: "/task/dashboard",
+    isSidebarOpen: true,
+  },
+  {
     icon: { icon: <BsGrid />, fillicon: <BsFillGridFill /> },
     label: "Grid",
     href: "/task/details",
