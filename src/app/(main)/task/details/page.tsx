@@ -26,7 +26,7 @@ export default function DataGrid() {
     const Axios = axios.get('http://localhost:8000/api/user/tasks/');
       Axios.then((res)=>{
         console.log(res.data)
-        setData(res.data.results)
+        setData(res.data)
       })
   }, []);
   const filterSettings: object = { type: "Excel" };

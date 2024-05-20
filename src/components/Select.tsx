@@ -217,7 +217,7 @@ const SelectComponent: FC<TaskStatusSelectProps> = ({ onChange, placeholder ,end
       try {
         const response = await fetch(`http://127.0.0.1:8000/api/user/${endpoint}/`); // Replace with your actual API endpoint
         const data = await response.json();
-        setTaskStatuses(data.results); // Assuming the API returns an array of task statuses
+        setTaskStatuses(data); // Assuming the API returns an array of task statuses
       } catch (error) {
         console.error('Error fetching task statuses:', error);
       } finally {

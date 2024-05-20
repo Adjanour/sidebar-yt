@@ -69,3 +69,8 @@
   padding-top: 15px;
   padding-bottom: 20px;
 }
+
+.sticky-header.fixed {
+  position: fixed;
+  z-index: 1000;
+}

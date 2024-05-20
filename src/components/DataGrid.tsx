@@ -64,12 +64,12 @@ function DataGrid() {
     const Axios = axios.get("http://localhost:8000/api/user/tasks/");
     Axios.then((res) => {
       console.log(res.data);
-      setData(res.data.results);
+      setData(res.data);
     });
   }, []);
 
   const filterSettings: object = { type: "Excel" };
-  const pageSettings: object = { pageSize: 6 };
+  
 
   return (
     <GridComponent
@@ -79,7 +79,6 @@ function DataGrid() {
       allowGrouping={true}
       allowSorting={true}
       allowFiltering={true}
-      pageSettings={pageSettings}
       filterSettings={filterSettings}
     >
       <ColumnsDirective>
@@ -87,6 +86,7 @@ function DataGrid() {
           field="taskId"
           headerText="Task ID"
           textAlign="Left"
+          width="100"
         ></ColumnDirective>
         <ColumnDirective
           field="taskName"
@@ -114,7 +114,7 @@ function DataGrid() {
           textAlign="Left"
         />
       </ColumnsDirective>
-      <Inject services={[Page, Sort, Filter, Group]} />
+      <Inject services={[ Sort, Filter, Group]} />
     </GridComponent>
   );
 }

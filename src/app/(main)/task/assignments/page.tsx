@@ -23,7 +23,7 @@ export default function Task() {
   return (
     <div>
       
-      <div className="flex lg:grid-cols-2 sm:gird-cols-1  h-1\4 dark:bg-black dark:text-white ">
+      <div className="flex grid-cols-2   h-1\4 dark:bg-black dark:text-white ">
         {/* <TaskForm
           inputClass="form"
           formButtonClass="btn btn-primary"
@@ -32,8 +32,8 @@ export default function Task() {
           divClass="taskContainer"
         /> */}
         <TaskForm2/>
-        <div className="bg-white p-2 dark:bg-black dark:text-white dark:border-[1px] shadow-md rounded-md">
-          <div className="bg-gray-200 dark:bg-white dark:text-black rounded-md mb-1">
+        <div className="bg-white p-1 dark:bg-black dark:text-white dark:border-[1px] shadow-md rounded-md">
+          <div className="bg-gray-200 dark:bg-white dark:text-black rounded-md mb-3">
             <p className="mr-5 text-2xl">TaskDetails</p>
           </div>
           <DataGrid/>

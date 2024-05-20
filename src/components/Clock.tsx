@@ -34,11 +34,10 @@ const NavbarTimeComponent = () => {
   
   return (
     <>
-      <div className="flex flex-row">
-        <div className='mr-[4px]'><FormattedDate value={currentDate} year='numeric' month='long' day='2-digit'/></div>
+      
+        <FormattedDate value={currentDate} year='numeric' month='long' day='2-digit'/>
         <FormattedTime value={currentTime} hour='numeric' minute='numeric' second='numeric' />
-        <time  suppressHydrationWarning />
-      </div>
+      
     </>
   );
 };
